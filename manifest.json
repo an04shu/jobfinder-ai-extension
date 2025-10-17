@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "JobFinder AI",
+  "version": "2.1.0",
+  "description": "Fetch and display real-time job opportunities from top tech companies using live job data in a persistent side panel.",
+  "action": {
+    "default_title": "Open JobFinder AI Side Panel"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "https://jsearch.p.rapidapi.com/*"
+  ]
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobFinder AI - Side Panel</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎯 JobFinder AI</h1>
+      <p class="subtitle">Your persistent job search companion</p>
+    </header>
+
+    <div class="action-section">
+      <button id="fetchJobsBtn" class="fetch-btn">
+        <span class="btn-icon">🔍</span>
+        Fetch Jobs
+      </button>
+    </div>
+
+    <div id="loadingSpinner" class="loading-spinner hidden">
+      <div class="spinner"></div>
+      <p>Fetching latest opportunities...</p>
+    </div>
+
+    <div id="jobsContainer" class="jobs-container">
+      <!-- Jobs will be dynamically inserted here -->
+    </div>
+
+    <div id="emptyState" class="empty-state">
+      <div class="empty-icon">📋</div>
+      <p>Click "Fetch Jobs" to discover opportunities</p>
+      <p class="empty-hint">This panel stays open while you browse!</p>
+    </div>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>

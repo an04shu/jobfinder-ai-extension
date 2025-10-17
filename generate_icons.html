@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Generator - JobFinder AI</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #718096;
+            margin-bottom: 30px;
+        }
+        .instructions {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        .instructions ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin: 8px 0;
+            color: #2d3748;
+        }
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        .preview-container {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 10px;
+        }
+        .preview-container h3 {
+            margin-top: 0;
+            color: #2d3748;
+        }
+        .icons-row {
+            display: flex;
+            gap: 20px;
+            align-items: flex-end;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .icon-preview {
+            text-align: center;
+        }
+        .icon-preview canvas {
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        .icon-preview p {
+            margin: 0;
+            font-size: 12px;
+            color: #718096;
+            font-weight: 600;
+        }
+        .download-links {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .download-link {
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.2s;
+            display: block;
+        }
+        .download-link:hover {
+            background: #667eea;
+            color: white;
+        }
+        .success-message {
+            background: #48bb78;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Icon Generator</h1>
+        <p class="subtitle">Generate icons for JobFinder AI Chrome Extension</p>
+
+        <div class="instructions">
+            <strong>📋 Instructions:</strong>
+            <ol>
+                <li>Click the "Generate Icons" button below</li>
+                <li>Download each icon by clicking the download links</li>
+                <li>Save them in your JustApply folder with the exact names shown</li>
+                <li>Load the extension in Chrome (see SETUP_GUIDE.md)</li>
+            </ol>
+        </div>
+
+        <button onclick="generateIcons()">🎯 Generate Icons</button>
+
+        <div id="previewContainer" class="preview-container" style="display: none;">
+            <h3>✨ Generated Icons Preview</h3>
+            <div class="icons-row">
+                <div class="icon-preview">
+                    <canvas id="canvas16" width="16" height="16"></canvas>
+                    <p>16 × 16</p>
+                </div>
+                <div class="icon-preview">
+                    <canvas id="canvas48" width="48" height="48"></canvas>
+                    <p>48 × 48</p>
+                </div>
+                <div class="icon-preview">
+                    <canvas id="canvas128" width="128" height="128"></canvas>
+                    <p>128 × 128</p>
+                </div>
+            </div>
+
+            <div class="download-links">
+                <a id="download16" class="download-link" download="icon16.png">📥 Download icon16.png</a>
+                <a id="download48" class="download-link" download="icon48.png">📥 Download icon48.png</a>
+                <a id="download128" class="download-link" download="icon128.png">📥 Download icon128.png</a>
+            </div>
+
+            <div class="success-message" id="successMessage">
+                ✅ Icons generated successfully! Click the download links above.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function drawIcon(canvas, size) {
+            const ctx = canvas.getContext('2d');
+            
+            // Create gradient background
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(1, '#764ba2');
+            
+            // Fill background
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, size, size);
+            
+            // Draw circle
+            const margin = size / 6;
+            const radius = (size - 2 * margin) / 2;
+            const centerX = size / 2;
+            const centerY = size / 2;
+            
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+            ctx.fill();
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = Math.max(1, size / 32);
+            ctx.stroke();
+            
+            // Draw text "JF"
+            ctx.fillStyle = 'white';
+            ctx.font = `bold ${size / 2}px Arial, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('JF', centerX, centerY);
+        }
+
+        function generateIcons() {
+            // Generate icons for all sizes
+            const sizes = [
+                { id: 'canvas16', size: 16, downloadId: 'download16' },
+                { id: 'canvas48', size: 48, downloadId: 'download48' },
+                { id: 'canvas128', size: 128, downloadId: 'download128' }
+            ];
+
+            sizes.forEach(({ id, size, downloadId }) => {
+                const canvas = document.getElementById(id);
+                drawIcon(canvas, size);
+                
+                // Create download link
+                canvas.toBlob(blob => {
+                    const url = URL.createObjectURL(blob);
+                    const downloadLink = document.getElementById(downloadId);
+                    downloadLink.href = url;
+                });
+            });
+
+            // Show preview container
+            document.getElementById('previewContainer').style.display = 'block';
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Scroll to preview
+            document.getElementById('previewContainer').scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'nearest' 
+            });
+        }
+    </script>
+</body>
+</html>

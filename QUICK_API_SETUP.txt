@@ -1,0 +1,204 @@
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║           🔑 QUICK API SETUP - JOBFINDER AI 2.0 🔑            ║
+║                                                                ║
+║              Now with Real-Time Job Data!                     ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+
+⚡ SETUP IN 3 STEPS (5 MINUTES):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  GET FREE API KEY
+   → Visit: https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch
+   → Sign up (free, no credit card)
+   → Subscribe to "Basic (Free)" plan
+   → Copy your API key
+
+2️⃣  CONFIGURE EXTENSION
+   → Open: popup.js (in text editor)
+   → Find line 10: apiKey: 'YOUR_RAPIDAPI_KEY_HERE'
+   → Replace with your actual key
+   → Save file
+
+3️⃣  RELOAD & TEST
+   → Open: chrome://extensions/
+   → Click reload icon on JobFinder AI
+   → Click extension icon → "Fetch Jobs"
+   → See real job listings! 🎉
+
+
+📊 WHAT YOU GET (FREE PLAN):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ 2,500 free API requests per month
+✅ Real-time job data from multiple sources
+✅ Jobs from Google, Amazon, Microsoft, NVIDIA, Adobe
+✅ Direct application links
+✅ No credit card required
+✅ More than enough for daily use
+
+
+🔍 BEFORE vs AFTER:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BEFORE (v1.0):
+  ❌ Mock/fake job data
+  ❌ Generic career site links
+  ❌ No real job titles
+  ❌ Static list
+
+AFTER (v2.0):
+  ✅ Real job openings
+  ✅ Direct apply links
+  ✅ Actual job titles
+  ✅ Live data from API
+
+
+⚙️ CUSTOMIZATION OPTIONS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Change Job Type:
+  Line 67 in popup.js
+  → 'product manager (Google OR Amazon OR ...)'
+  → 'data scientist (Google OR Amazon OR ...)'
+
+Change Date Range:
+  Line 73 in popup.js
+  → 'today'    - Today's jobs
+  → '3days'    - Last 3 days
+  → 'week'     - Last week (default)
+  → 'month'    - Last month
+
+Increase Job Count:
+  Line 93 in popup.js
+  → Change .slice(0, 15) to .slice(0, 30)
+
+
+🛠️ FILES MODIFIED:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✏️  manifest.json  - Added API permissions
+✏️  popup.js        - Complete rewrite with API integration
+✏️  popup.css       - Added error message styling
+
+
+🆕 NEW FILES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📄 API_SETUP_GUIDE.md    - Detailed API setup instructions
+📄 QUICK_API_SETUP.txt   - This file
+
+
+🐛 TROUBLESHOOTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Error: "Please configure your RapidAPI key"
+→ You haven't replaced the placeholder key yet
+→ Open popup.js and add your key
+
+Error: "Failed to fetch jobs"
+→ Check your API key is correct
+→ Make sure you're subscribed to JSearch API
+→ Verify internet connection
+
+No jobs appear:
+→ Try changing date_posted to 'month' or 'all'
+→ Check console for errors (Right-click → Inspect)
+
+
+🔒 SECURITY TIPS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️  Keep your API key private
+⚠️  Don't share on GitHub (it's in .gitignore)
+⚠️  Don't post screenshots with key visible
+✅  Each user should get their own free key
+
+
+📚 FULL DOCUMENTATION:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+→ API_SETUP_GUIDE.md  - Complete setup guide
+→ README.md           - Extension overview
+→ QUICK_START.md      - Installation guide
+
+
+💡 PRO TIPS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Monitor your API usage on RapidAPI dashboard
+2. Each "Fetch Jobs" click = 1 API request
+3. 10 clicks/day = 300 requests/month (well under limit!)
+4. Customize search query for your interests
+5. Share extension, but users need own API keys
+
+
+🎯 API KEY FORMAT:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Your key looks like:
+  abc123def456ghi789jkl012mno345pqr678stu
+
+In popup.js it should be:
+  apiKey: 'abc123def456ghi789jkl012mno345pqr678stu',
+          ↑                                       ↑
+       Keep these quotes!
+
+
+✅ READY TO GO?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ ] Got API key from RapidAPI
+[ ] Subscribed to JSearch API (free plan)
+[ ] Opened popup.js in text editor
+[ ] Replaced 'YOUR_RAPIDAPI_KEY_HERE' with actual key
+[ ] Saved the file
+[ ] Reloaded extension in Chrome
+[ ] Tested by clicking "Fetch Jobs"
+[ ] Seeing real job listings!
+
+
+🎉 SUCCESS INDICATORS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Jobs have real, varied titles (not "Senior Software Engineer" x10)
+✓ Company names match real employers
+✓ Locations vary by job
+✓ "View Job" opens actual job application pages
+✓ Jobs update when you click "Fetch Jobs" again
+
+
+📞 NEED HELP?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+→ Read: API_SETUP_GUIDE.md (detailed instructions)
+→ Check: Chrome DevTools console for errors
+→ Visit: RapidAPI support if API issues
+
+
+═══════════════════════════════════════════════════════════════════
+
+                 Ready to find your dream job? 🚀
+              Now with REAL job data powered by JSearch!
+
+═══════════════════════════════════════════════════════════════════
+
+
+📌 QUICK LINKS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Get API Key:
+https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch
+
+RapidAPI Dashboard (monitor usage):
+https://rapidapi.com/developer/dashboard
+
+JSearch API Documentation:
+https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch/details
+
+
+═══════════════════════════════════════════════════════════════════
+           JobFinder AI v2.0 - Now with Real-Time Jobs!
+═══════════════════════════════════════════════════════════════════
