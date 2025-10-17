@@ -13,10 +13,74 @@
       <p class="subtitle">Your persistent job search companion</p>
     </header>
 
+    <!-- Profile Setup Section -->
+    <div id="profileSection" class="profile-section hidden">
+      <div class="profile-header">
+        <h2>👤 Setup Your Profile</h2>
+        <p class="profile-subtitle">Help us find jobs tailored for you</p>
+      </div>
+      
+      <form id="profileForm" class="profile-form">
+        <div class="form-group">
+          <label for="jobRole">Desired Job Role <span class="required">*</span></label>
+          <input type="text" id="jobRole" placeholder="e.g., Software Engineer, Data Scientist" required>
+        </div>
+
+        <div class="form-group">
+          <label for="skills">Primary Skills</label>
+          <input type="text" id="skills" placeholder="e.g., Python, JavaScript, React">
+          <small>Optional - leave blank to search all skills</small>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="experience">Years of Experience</label>
+            <input type="number" id="experience" placeholder="0-20" min="0" max="50">
+            <small>Optional</small>
+          </div>
+
+          <div class="form-group">
+            <label for="graduation">Graduation Year</label>
+            <input type="number" id="graduation" placeholder="2020" min="1990" max="2030">
+            <small>Optional</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Preferred Location</label>
+          <input type="text" id="location" placeholder="e.g., Remote, San Francisco, New York">
+          <small>Optional - leave blank for all locations</small>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="save-profile-btn">
+            <span>💾</span> Save Profile
+          </button>
+          <button type="button" id="cancelProfileBtn" class="cancel-btn hidden">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Profile Summary (shown when profile exists) -->
+    <div id="profileSummary" class="profile-summary hidden">
+      <div class="profile-info">
+        <div class="profile-badge">👤</div>
+        <div class="profile-details">
+          <div id="summaryRole" class="profile-role"></div>
+          <div id="summarySkills" class="profile-skills"></div>
+        </div>
+      </div>
+      <button id="editProfileBtn" class="edit-profile-btn" title="Edit Profile">
+        ⚙️
+      </button>
+    </div>
+
     <div class="action-section">
       <button id="fetchJobsBtn" class="fetch-btn">
         <span class="btn-icon">🔍</span>
-        Fetch Jobs
+        <span id="fetchBtnText">Fetch Personalized Jobs</span>
       </button>
     </div>
 

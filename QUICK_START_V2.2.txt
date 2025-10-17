@@ -1,0 +1,436 @@
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║      🎯 JOBFINDER AI v2.2 - PERSONALIZED JOB SEARCH! 🎯      ║
+║                                                                ║
+║         Now with Intelligent Profile-Based Matching!          ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+
+🎉 WHAT'S NEW IN v2.2:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ SMART PROFILE SYSTEM
+   → Set your job role, skills, experience on first use
+   → Stored securely in Chrome (local storage)
+   → Edit anytime with one click
+
+✅ PERSONALIZED JOB SEARCH
+   → Jobs tailored to YOUR skills and experience
+   → Experience-level matching (entry/mid/senior)
+   → Skills-based filtering (OR logic)
+   → Optional location preference
+
+✅ DYNAMIC QUERY GENERATION
+   → API queries adapt to your profile automatically
+   → No manual query editing needed
+   → More relevant results every time
+
+✅ PRIVACY FIRST
+   → All data stored locally (not on servers)
+   → No tracking or analytics
+   → You control your data
+
+
+🚀 FIRST TIME SETUP (2 MINUTES):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: INSTALL EXTENSION
+   → Follow normal installation (chrome://extensions/)
+   → Make sure API key is configured in sidepanel.js
+
+STEP 2: CREATE YOUR PROFILE
+   → Open extension (click icon)
+   → Profile setup form appears automatically
+   → Fill in your details:
+      • Job Role (e.g., "Software Engineer")
+      • Skills (e.g., "Python, React, Node.js")
+      • Years of Experience (0-50)
+      • Graduation Year (e.g., 2020)
+      • Preferred Location (optional)
+
+STEP 3: SAVE & SEARCH
+   → Click "💾 Save Profile"
+   → Success message appears ✅
+   → Profile summary shows your info
+   → Click "Fetch Personalized Jobs"
+   → See jobs matched to YOUR profile! 🎯
+
+
+📋 PROFILE FORM FIELDS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+REQUIRED FIELDS (marked with *):
+
+1. Desired Job Role *
+   Example: "Software Engineer"
+   Example: "Data Scientist"
+   Example: "Frontend Developer"
+
+2. Primary Skills *
+   Example: "Python, JavaScript, React"
+   Example: "Java, Spring Boot, AWS"
+   Note: Comma-separated list
+
+3. Years of Experience *
+   Range: 0-50
+   0 = Entry Level / Intern
+   1-2 = Junior
+   3-5 = Mid-level
+   6+ = Senior
+
+4. Graduation Year *
+   Example: 2020
+   Range: 1990-2030
+   Used for validation
+
+OPTIONAL FIELDS:
+
+5. Preferred Location
+   Example: "Remote"
+   Example: "San Francisco"
+   Example: "New York, NY"
+   Leave blank for all locations
+
+
+🎯 HOW PERSONALIZATION WORKS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BEFORE (Generic Search):
+  Query: "software engineer (Google OR Amazon OR ...)"
+  Result: Mix of all levels, any tech stack
+
+AFTER (Personalized Search):
+  Your Profile:
+    - Role: Data Scientist
+    - Skills: Python, Machine Learning
+    - Experience: 3 years
+    - Location: Remote
+
+  Generated Query:
+    "Data Scientist (Python OR Machine Learning) 
+     mid-level OR intermediate Remote 
+     (Google OR Amazon OR Microsoft OR NVIDIA OR Adobe)"
+
+  Result: Mid-level remote Data Science jobs with Python/ML!
+
+
+📊 EXPERIENCE LEVEL MAPPING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Your Experience → Keywords Added to Search
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+0 years         → "entry level OR junior OR intern"
+1-2 years       → "junior OR entry level"
+3-5 years       → "mid-level OR intermediate"
+6+ years        → "senior OR lead"
+
+
+⚙️ EDITING YOUR PROFILE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Once saved, your profile shows as a summary:
+
+┌─────────────────────────────────┐
+│ 👤  Software Engineer           │
+│     Python, React, Node.js • 2  │
+│     years                    ⚙️ │
+└─────────────────────────────────┘
+
+TO EDIT:
+1. Click the ⚙️ settings icon
+2. Form appears with your current data
+3. Make changes
+4. Click "Save Profile" or "Cancel"
+
+
+💡 TIPS FOR BEST RESULTS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+JOB ROLE:
+✅ "Software Engineer"
+✅ "Data Scientist"
+✅ "Product Manager"
+❌ "Engineer" (too generic)
+❌ "Any tech job" (not specific)
+
+SKILLS:
+✅ "Python, JavaScript, React, Node.js"
+✅ "AWS, Docker, Kubernetes"
+✅ Use specific tech names
+❌ Don't use categories like "frontend"
+💡 List 3-7 skills for best results
+
+EXPERIENCE:
+✅ Be honest about your level
+✅ Include internships as 0 years
+✅ Round down (3.5 years → 3)
+❌ Don't inflate experience
+
+LOCATION:
+✅ "Remote" for remote-only
+✅ "San Francisco" for specific city
+✅ Leave blank for all locations
+💡 Use comma for multiple: "Remote, NYC"
+
+
+📈 REAL-WORLD EXAMPLES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EXAMPLE 1: NEW GRADUATE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Profile:
+  Role: Software Engineer
+  Skills: Python, Java, SQL
+  Experience: 0
+  Graduation: 2024
+  Location: (blank)
+
+Query Generated:
+  "Software Engineer (Python OR Java OR SQL) 
+   entry level OR junior OR intern 
+   (Google OR Amazon OR Microsoft OR NVIDIA OR Adobe)"
+
+Result: Entry-level positions, internships, junior roles
+
+
+EXAMPLE 2: MID-LEVEL FRONTEND DEV
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Profile:
+  Role: Frontend Developer
+  Skills: React, TypeScript, CSS
+  Experience: 4
+  Graduation: 2019
+  Location: Remote
+
+Query Generated:
+  "Frontend Developer (React OR TypeScript OR CSS) 
+   mid-level OR intermediate Remote 
+   (Google OR Amazon OR Microsoft OR NVIDIA OR Adobe)"
+
+Result: Mid-level remote frontend positions
+
+
+EXAMPLE 3: SENIOR DATA SCIENTIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Profile:
+  Role: Data Scientist
+  Skills: Python, ML, TensorFlow
+  Experience: 8
+  Graduation: 2015
+  Location: San Francisco
+
+Query Generated:
+  "Data Scientist (Python OR ML OR TensorFlow) 
+   senior OR lead San Francisco 
+   (Google OR Amazon OR Microsoft OR NVIDIA OR Adobe)"
+
+Result: Senior DS roles in San Francisco
+
+
+🔧 WHAT HAPPENS BEHIND THE SCENES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. PROFILE STORAGE
+   → Saved to chrome.storage.local
+   → Persists across browser sessions
+   → ~200 bytes of data
+
+2. QUERY BUILDING
+   → buildSearchQuery() function
+   → Combines: role + skills + experience + location
+   → Adds company filter
+   → Returns personalized query string
+
+3. API REQUEST
+   → Uses your personalized query
+   → Fetches from JSearch API
+   → Returns matched jobs
+
+4. RESULTS DISPLAY
+   → Jobs tailored to your profile
+   → Experience-appropriate roles
+   → Skills mentioned in descriptions
+
+
+🐛 TROUBLESHOOTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PROFILE WON'T SAVE:
+→ Make sure all required fields (*) are filled
+→ Check browser console for errors
+→ Verify storage permission in manifest.json
+
+JOBS NOT PERSONALIZED:
+→ Open console and check search query
+→ Should show your profile data
+→ If not, profile may not be loaded
+
+PROFILE FORM WON'T APPEAR:
+→ Clear storage: chrome.storage.local.remove('userProfile')
+→ Reload extension
+→ Open side panel again
+
+CHECK YOUR PROFILE:
+→ Open browser console (F12)
+→ Type: chrome.storage.local.get(console.log)
+→ Should see userProfile object
+
+
+🔒 PRIVACY & SECURITY:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WHAT WE STORE:
+✅ Job role, skills, experience, graduation, location
+✅ Locally in Chrome (not on servers)
+✅ Used ONLY for search queries
+
+WHAT WE DON'T STORE:
+❌ Name, email, phone, or personal info
+❌ Resume or work history
+❌ Application data
+❌ Browsing history
+
+YOUR DATA:
+→ Stored locally on YOUR computer
+→ Never sent to external servers (except in API query)
+→ No tracking or analytics
+→ You control everything
+
+TO CLEAR DATA:
+1. Go to chrome://settings/content/all
+2. Find chrome-extension://[your-id]
+3. Click "Clear data"
+
+
+📚 DOCUMENTATION:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PERSONALIZATION_GUIDE.md
+  → Complete guide (17+ KB)
+  → Setup instructions
+  → Best practices
+  → Examples & troubleshooting
+
+PERSONALIZATION_SUMMARY.md
+  → Technical overview
+  → Architecture details
+  → Testing instructions
+
+README.md
+  → Updated with v2.2 features
+  → Installation guide
+  → Quick start
+
+
+✅ QUICK CHECKLIST:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SETUP:
+[ ] Extension installed
+[ ] API key configured in sidepanel.js
+[ ] Extension reloaded
+
+FIRST USE:
+[ ] Opened side panel
+[ ] Profile form appeared
+[ ] Filled all required fields
+[ ] Clicked "Save Profile"
+[ ] Success message appeared
+[ ] Profile summary displayed
+
+TESTING:
+[ ] Clicked "Fetch Personalized Jobs"
+[ ] Jobs appeared
+[ ] Job titles match my role
+[ ] Experience level appropriate
+[ ] Skills mentioned in jobs
+
+VERIFIED:
+[ ] Profile stored (check console)
+[ ] Can edit profile via ⚙️ button
+[ ] Changes save successfully
+[ ] Jobs update with new profile
+
+
+🎯 SUCCESS INDICATORS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+You'll know it's working when:
+
+✅ Profile form appears on first open
+✅ Profile saves with success message
+✅ Profile summary shows your info
+✅ Console shows personalized query
+✅ Job titles match your role
+✅ Jobs mention your skills
+✅ Experience level is appropriate
+✅ Can edit and update profile
+✅ Location filter works (if set)
+
+
+═══════════════════════════════════════════════════════════════════
+
+            🎉 WELCOME TO PERSONALIZED JOB SEARCH! 🎉
+
+       Find jobs that match YOUR skills and experience!
+              No more scrolling through irrelevant listings!
+
+═══════════════════════════════════════════════════════════════════
+
+
+🚀 QUICK START GUIDE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. FIRST TIME
+   → Open extension
+   → Fill profile form
+   → Save profile
+   → Fetch personalized jobs!
+
+2. RETURNING USER
+   → Open extension
+   → Profile auto-loads
+   → Fetch jobs (or see cached)
+   → Update profile anytime via ⚙️
+
+3. DAILY USE
+   → Click "Fetch Personalized Jobs"
+   → Browse relevant matches
+   → Click "View Job" to apply
+   → Panel stays open while browsing!
+
+
+💎 PRO TIPS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Be specific with job role
+2. List 3-7 most important skills
+3. Update profile when learning new skills
+4. Try different skill combinations
+5. Use location filter strategically
+6. Check results daily for new postings
+7. Edit profile as you gain experience
+
+
+📞 NEED HELP?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Read: PERSONALIZATION_GUIDE.md
+Check: Browser console (F12)
+Debug: chrome.storage.local.get(console.log)
+Review: README.md for general info
+
+
+═══════════════════════════════════════════════════════════════════
+
+              Ready to find YOUR perfect job? 🎯
+
+          Setup → Personalize → Discover → Apply!
+
+═══════════════════════════════════════════════════════════════════
+
+
+Version 2.2.0 - Personalized Job Search
+Chrome Manifest V3 Compatible
+Privacy-Focused • User-Centric • Smart Matching

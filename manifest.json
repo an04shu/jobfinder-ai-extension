@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "JobFinder AI",
-  "version": "2.1.0",
-  "description": "Fetch and display real-time job opportunities from top tech companies using live job data in a persistent side panel.",
+  "version": "2.5.0",
+  "description": "Get verified job postings from official sources only - LinkedIn, company career pages, and trusted job boards with personalized recommendations.",
   "action": {
     "default_title": "Open JobFinder AI Side Panel"
   },

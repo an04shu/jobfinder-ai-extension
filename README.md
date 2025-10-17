@@ -1,16 +1,38 @@
-# 🎯 JobFinder AI v2.1
+# 🎯 JobFinder AI v2.4
 
-A lightweight Chrome Extension that fetches **real-time job opportunities** from top tech companies including Google, Amazon, Microsoft, NVIDIA, and Adobe using the JSearch API. Now with a **persistent side panel interface**!
+A lightweight Chrome Extension that fetches **real-time job opportunities** from top tech companies using the JSearch API. Now with **flexible profiles** (only job role required), **5x more results**, and support for **10 major companies**!
 
-## 🆕 What's New in v2.1 - Side Panel Mode!
+## 🆕 What's New in v2.4 - Flexible Profiles & Maximum Results!
+
+- ⚡ **Simplified Setup** - Only job role required, all other fields optional
+- 📊 **5x More Results** - Up to 75 jobs for freshers, 45 for experienced (vs 15-30 before)
+- 🏢 **10 Companies** - Added Meta, Apple, Netflix, Tesla, Uber (vs 5 before)
+- 🎯 **Smart Optional Fields** - Fill what you want, leave rest blank for broader search
+- 🚀 **More Pages** - Fetches 3-5 pages per query for maximum opportunities
+
+## ✨ Previous Updates
+
+### v2.3 - Enhanced Fresher Support
+
+- 🎓 **Automatic Fresher Detection** - Detects 0-1 year experience or recent graduates
+- 🔍 **Multi-Query Search** - 3 parallel searches with fresher keywords
+- 📈 **2x More Results** - Extended to 30 results for entry-level candidates
+- 🏷️ **Entry-Level Badges** - Visual indicators on job cards
+
+### v2.2 - Personalized Job Search
+
+- 👤 **Smart Profile System** - Set up your job preferences
+- 🎯 **Intelligent Matching** - Jobs tailored to your role, skills, and experience
+- 📊 **Dynamic Queries** - API searches adapt to your profile
+- ⚙️ **Edit Anytime** - Update preferences with one click
+
+### v2.1 - Side Panel Mode
 
 - 📌 **Persistent Side Panel** - Extension stays open while you browse tabs
 - 🖼️ **Better Layout** - More space for job listings and details
 - 💾 **Cache Support** - Last fetched jobs saved and restored
-- 🔄 **Multi-tasking** - Browse jobs while visiting company websites
-- ⚡ **Always Accessible** - No need to keep re-opening the extension
 
-## ✨ Previous Updates (v2.0)
+### v2.0 - Real Job Data
 
 - 🆕 **Real Job Data** - Fetches actual job openings from JSearch API (RapidAPI)
 - 🔄 **Live Updates** - Get current job listings, not static links
@@ -20,7 +42,9 @@ A lightweight Chrome Extension that fetches **real-time job opportunities** from
 
 ## Features
 
-- 📌 **Persistent Side Panel** - Stays open while you browse (NEW!)
+- 👤 **Personalized Job Search** - AI-powered matching based on your profile (NEW!)
+- 📌 **Persistent Side Panel** - Stays open while you browse
+- 🎯 **Smart Profile System** - Set role, skills, experience, and location (NEW!)
 - 🔍 **One-Click Job Discovery** - Fetch latest job opportunities with a single click
 - 🏢 **Multiple Companies** - Real jobs from Google, Amazon, Microsoft, NVIDIA, and Adobe
 - 🚀 **Direct Application Links** - Open actual job application pages
@@ -28,6 +52,7 @@ A lightweight Chrome Extension that fetches **real-time job opportunities** from
 - ⚡ **Lightweight & Fast** - Minimal resource usage, built with Manifest V3
 - 📊 **Error Handling** - Graceful error messages and loading states
 - 💾 **Smart Caching** - Saves your last search for quick access
+- 🔒 **Privacy Focused** - All profile data stored locally on your device
 
 ## Installation & Setup
 
